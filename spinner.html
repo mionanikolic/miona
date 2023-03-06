@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS Rotation animation</title>
+    <meta name="viewport" content="width-device-width,initial-scale-1"/>
+	<style>
+.spinner {
+  position: fixed;
+  top: 10%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  border: 30px solid;
+  border-radius: 50%;
+  border-top-color: red;
+  background-color: #050210;
+  animation: spin 2s linear infinite, glow 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    border-top-color: #fb5dad;
+	border-left-color: #55fb9f;
+	border-right-color: #b97aff;
+	border-bottom-color: #fb5dad;
+  }
+  16.67% {
+    border-top-color: #b97aff;
+	border-left-color: #fb5dad;
+	border-right-color: #55fb9f;
+	border-bottom-color: #55fb9f;
+  }
+  33.33% {
+    border-top-color: #55fb9f;
+	border-left-color: #b97aff;
+	border-right-color: #fb5dad;
+	border-bottom-color: #b97aff;
+  }
+  50% {
+    border-top-color: #fb5dad;
+	border-left-color: #55fb9f;
+	border-right-color: #b97aff;
+	border-bottom-color: #fb5dad;
+  }
+  66.67% {
+    border-top-color: #b97aff;
+	border-left-color: #fb5dad;
+	border-right-color: #55fb9f;
+	border-bottom-color: #fb5dad;
+  }
+  83.33% {
+    border-top-color: #55fb9f;
+	border-left-color: #b97aff;
+	border-right-color: #fb5dad;
+	border-bottom-color: #fb5dad;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-top-color: #fb5dad;
+	border-left-color: #55fb9f;
+	border-right-color: #b97aff;
+	border-bottom-color: #fb5dad;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+}
+
+body {
+background-color: #050210;
+}
+	</style>
+</head>
+<body>
+   <div class="spinner"></div>
+</body>
+</html>
